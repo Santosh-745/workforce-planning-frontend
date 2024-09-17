@@ -111,7 +111,9 @@ table {
     }
 }
 
-
+mat-paginator {
+    background-color: transparent;
+}
 
 
 /* 
