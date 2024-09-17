@@ -1,0 +1,167 @@
+<div name="main" id="main-container">
+    <div id="title">
+        <button id="back-button">
+            <img src="back-arrow.png" alt="back-arrow" width="10px" height="10px">
+        </button>
+        <div id="text">
+            Ahmedabad Growth
+        </div>
+    </div>
+    <div id="top-bar">
+        <div id="filters">
+            <input type="text" name="search" placeholder="Search by name">
+            <div id="select-div">
+                <select>
+                    <option value="" disabled selected>Designation</option>
+                    <option value="hr">HR</option>
+                    <option value="software_engineer">Software Engineer</option>
+                    <option value="designer">Designer</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button id="create-button">
+                + create postion
+            </button>
+        </div>
+    </div>
+    <div id="main-content">
+        <!-- <table class="fixed-header">
+                <thead class="header">
+                    <tr class="row" id="header-row">
+                        <th class="col col-1">Designation</th>
+                        <div class="vl"></div>
+                        <th class="col col-2">Department</th>
+                        <div class="vl"></div>
+                        <th class="col col-3">Budget</th>
+                        <div class="vl"></div>
+                        <th class="col col-4">Location</th>
+                        <div class="vl"></div>
+                        <th class="col col-5">Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody class="scrollable">
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col col-1">Programmer Analyst</td>
+                        <td class="col col-2">Engineering</td>
+                        <td class="col col-3">10 L</td>
+                        <td class="col col-4">Ahmedabad</td>
+                        <td class="col col-5">Ankit Kumar</td>
+                    </tr>
+                </tbody>
+            </table> -->
+        <section class="table-div mat-elevation-z8" tabindex="0">
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="designation">
+                    <th mat-header-cell *matHeaderCellDef> Designation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.designation}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="department">
+                    <th mat-header-cell *matHeaderCellDef> Department </th>
+                    <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="budget">
+                    <th mat-header-cell *matHeaderCellDef> Budget </th>
+                    <td mat-cell *matCellDef="let element"> {{element.budget}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="location">
+                    <th mat-header-cell *matHeaderCellDef> Location </th>
+                    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="lastUpdated">
+                    <th mat-header-cell *matHeaderCellDef> Last Updated </th>
+                    <td mat-cell *matCellDef="let element"> {{element.lastUpdated}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </section>
+        <div id="calculations">
+            calculations
+        </div>
+    </div>
+    <div id="pagination">
+        <mat-paginator [length]="totalData" [pageSize]="20" aria-label="Select page" hidePageSize="true">
+        </mat-paginator>
+    </div>
+</div>
